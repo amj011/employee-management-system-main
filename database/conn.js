@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const connectMongo = async () => {
 	try {
 		mongoose.set("strictQuery", true);
-		const { connection } = await mongoose.connect(MONGO_URI=mongodb+srv://aniruddhamanoharjoshi:9kusgfzrlnnz9xFw@cluster0.mezyjoq.mongodb.net/test);
+		const { connection } = await mongoose.connect(mongodb+srv://aniruddhamanoharjoshi:9kusgfzrlnnz9xFw@cluster0.mezyjoq.mongodb.net/test);
 
 		if (connection.readyState == 1) {
 			console.log("Database Connected");
