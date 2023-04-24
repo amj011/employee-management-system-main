@@ -30,6 +30,7 @@ export async function getUser(req, res) {
 
 // post : http://localhost:3000/api/users
 export async function postUser(req, res) {
+    res.WriteHeader(http.StatusOK);
 	try {
 		const formData = req.body;
 		if (!formData)
@@ -44,6 +45,7 @@ export async function postUser(req, res) {
 
 // put : http://localhost:3000/api/users/1
 export async function putUser(req, res) {
+	res.WriteHeader(http.StatusOK);
 	try {
 		const { userId } = req.query;
 		const formData = req.body;
@@ -60,6 +62,7 @@ export async function putUser(req, res) {
 
 // delete : http://localhost:3000/api/users/1
 export async function deleteUser(req, res) {
+	res.WriteHeader(http.StatusOK);
 	try {
 		const { userId } = req.query;
 
